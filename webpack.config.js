@@ -16,7 +16,14 @@ const hotModule = isProduction ? () => {} : new webpack.NamedModulesPlugin()
 const hotModuleReplacement = isProduction ? () => {} : new webpack.HotModuleReplacementPlugin()
 
 module.exports = {
-  entry: ['babel-polyfill', './src'],
+  entry: {
+    main: './src',
+    components: './src/components',
+    stores: './src/stores',
+    services: './src/services',
+    midlewares: './src/midlewares',
+    utils: './src/utils'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]-[hash].bundle.js'
@@ -53,6 +60,16 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'shared',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -67,8 +84,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.ejs'),
       minify: {
         collapseWhitespace: true
-      },
-      hash: true
+      }
     }),
     new CopyPlugin([
       {
