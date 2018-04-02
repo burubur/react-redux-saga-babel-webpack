@@ -4,6 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const DotenvWebpackPlugin = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const appPackage = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json')))
 const gitRev = require('git-rev-sync')
@@ -18,7 +19,7 @@ module.exports = {
   entry: ['babel-polyfill', './src'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name]-[hash].bundle.js'
   },
   module: {
     rules: [
@@ -75,6 +76,7 @@ module.exports = {
         to: 'assets'
       }
     ]),
+    new CleanWebpackPlugin(['dist'], {}),
     uglify,
     hotModule,
     hotModuleReplacement
