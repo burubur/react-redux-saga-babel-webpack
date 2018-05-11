@@ -17,16 +17,16 @@ const hotModuleReplacement = isProduction ? () => {} : new webpack.HotModuleRepl
 
 module.exports = {
   entry: {
-    main: './src',
-    components: './src/components',
-    stores: './src/stores',
-    services: './src/services',
-    midlewares: './src/midlewares',
-    utils: './src/utils'
+    main: ['babel-polyfill', './src'],
+    components: ['babel-polyfill', './src/components'],
+    stores: ['babel-polyfill', './src/stores'],
+    services: ['babel-polyfill', './src/services'],
+    midlewares: ['babel-polyfill', './src/midlewares'],
+    utils: ['babel-polyfill', './src/utils']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-[hash].bundle.js'
+    filename: '[name]-[hash].js'
   },
   module: {
     rules: [
