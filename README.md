@@ -1,8 +1,18 @@
 # React, Redux, Saga, Babel, Webpack
 
-1.0.0
+0.0.1
 
 React architecture using redux as a state management library and redux-saga as a middleware.
+
+Webpack plugins that I implemented:
+
+- dotenv to keep env variable
+- html generator to generate index.html
+- dist folder cleaner
+- assets copier
+- code-splitter
+- hot reload
+- hot module replacement (live UI changes once css file changed)
 
 ## Prerequisites
 
