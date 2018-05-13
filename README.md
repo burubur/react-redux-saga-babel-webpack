@@ -8,6 +8,9 @@ Webpack plugins that I implemented:
 
 - dotenv to keep env variable
 - html generator to generate index.html
+- minify indes.html file
+- hash .js name
+- uglify to mangle the code
 - dist folder cleaner
 - assets copier
 - code-splitter
