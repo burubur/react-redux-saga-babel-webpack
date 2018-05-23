@@ -36,13 +36,16 @@ module.exports = {
         exclude: /node_modules(?!\/webpack-dev-server)/
       }, {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
-          {
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader'
-          }
+          'style-loader',
+          'css-loader'
+        ]
+      }, {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader'
         ]
       }, {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
