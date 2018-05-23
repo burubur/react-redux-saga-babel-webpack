@@ -1,11 +1,15 @@
 {
-  "presets": [
-    "react",
-    "stage-1",
-    ["env", {
-      "targets": {
-        "node": "current"
-      }
+  "presets": [["es2015"], "react", "stage-3"],
+  "plugins": [
+    ["import", {
+      "libraryName": "antd",
+      "style": true
     }]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+      ]
+    }
+  }
 }
