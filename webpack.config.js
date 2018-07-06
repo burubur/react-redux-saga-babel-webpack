@@ -107,5 +107,6 @@ module.exports = {
     stats: 'errors-only',
     historyApiFallback: true,
     hot: true
-  }
+  },
+  mode: process.env.NODE_ENV
 }
