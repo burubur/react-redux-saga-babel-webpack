@@ -7,6 +7,6 @@ configure({ adapter: new Adapter() })
 
 const wrapper = shallow(<Index />)
 
-test('it should render "Halo Dunia."', () => {
-  expect(wrapper.text()).toContain('Halo Dunia')
+test('it should render layout base', () => {
+  expect(wrapper.text()).toContain('<Base />')
 })

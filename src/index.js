@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Index } from './components'
+import { Router } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import { Component } from './components'
 import { Provider } from 'react-redux'
 import { store } from './stores'
 
 const RootApp = () => (
   <Provider store={store}>
-    <Index />
+    <Router history={createBrowserHistory()} >
+      <Component />
+    </Router>
   </Provider>
 )
 const rootElement = document.querySelector('#root')

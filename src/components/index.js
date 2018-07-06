@@ -1,2 +1,6 @@
+import React from 'react'
+import Layout from './layouts'
 
-export const Index = () => 'Halo Dunia.'
+export const Component = () => (
+  <Layout />
+)
