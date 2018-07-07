@@ -88,7 +88,7 @@ module.exports = {
     }),
     new DotenvWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'RSCH',
+      title: 'Maukerja',
       template: path.resolve(__dirname, 'src/index.ejs'),
       minify: {
         collapseWhitespace: true
