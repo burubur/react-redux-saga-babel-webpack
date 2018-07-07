@@ -3,10 +3,10 @@ import { fetchJob } from './../../services/job'
 
 function * fetchJobs ({type, payload}) {
   try {
-    const payload = yield call(fetchJob)
+    const response = yield call(() => fetchJob(payload))
     yield put({
       type: 'fetchJobsSucceed',
-      payload: payload
+      payload: response
     })
   } catch (error) {
     yield put({
