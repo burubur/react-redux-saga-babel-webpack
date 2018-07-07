@@ -8,6 +8,10 @@ for a simplify reason, .env is provided, just copy and then enter a line of the 
 $ git checkout develop && yarn && npm run dev
 ```
 
+## Note
+
+Due to the mock API server is not complete for live interactive REST interaction, some of business logic is just a simulation, for instance: in searching feature, it's only filtered at client side. also for the pagination, its total is hard-coded for 35 records.
+
 ## Description
 
 This is just a little an incomplete project to solve aJobThing test.
