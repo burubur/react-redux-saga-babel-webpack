@@ -27,6 +27,7 @@
     "jest": "^22.4.3",
     "less": "^3.5.3",
     "less-loader": "^4.1.0",
+    "less-vars-to-js": "^1.2.1",
     "redux-devtools-extension": "^2.13.2",
     "regenerator-runtime": "^0.11.1",
     "style-loader": "^0.21.0",
