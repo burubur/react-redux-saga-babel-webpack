@@ -5,7 +5,7 @@
 for a simplify reason, .env is provided, just copy and then enter a line of the following command:
 
 ```
-$ yarn && npm run dev
+$ git checkout develop && yarn && npm run dev
 ```
 
 ## Description
