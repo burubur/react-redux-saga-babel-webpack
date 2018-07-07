@@ -7,9 +7,9 @@ class pagination extends Component {
   constructor(props){
     super(props)
     this.state = {
-      current: 0,
+      current: 1,
       total: 35,
-      pageSize: 5
+      pageSize: 10
     }
   }
   render() {
@@ -17,7 +17,11 @@ class pagination extends Component {
     const { current, total, pageSize } = this.state
     const onPaging = (page) => {
       dispatch({
-        type: 'fetchJobsRequested'
+        type: 'fetchJobsRequested',
+        payload: {
+          offset: pageSize * (page - 1),
+          limit: pageSize
+        }
       })
 
       this.setState({
