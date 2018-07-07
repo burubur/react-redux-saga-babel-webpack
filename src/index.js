@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { HashRouter, Router } from 'react-router-dom'
 import { Component } from './components'
 import { Provider } from 'react-redux'
 import { store } from './stores'
