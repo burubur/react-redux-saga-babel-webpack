@@ -2,6 +2,7 @@ require('dotenv').config()
 const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
+const lessToJs = require('less-vars-to-js')
 const DotenvWebpackPlugin = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -14,6 +15,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 const uglify = isProduction ? new webpack.optimize.UglifyJsPlugin() : () => {}
 const hotModule = isProduction ? () => {} : new webpack.NamedModulesPlugin()
 const hotModuleReplacement = isProduction ? () => {} : new webpack.HotModuleReplacementPlugin()
+const theme = lessToJs(fs.readFileSync(path.resolve(__dirname, 'src/theme.less'), 'utf8'))
 
 module.exports = {
   entry: {
@@ -48,7 +50,8 @@ module.exports = {
           {
             loader: "less-loader",
             options: {
-                javascriptEnabled: true
+              javascriptEnabled: true,
+              modifyVars: theme
             }
           }
         ]
