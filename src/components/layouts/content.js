@@ -15,7 +15,7 @@ class content extends Component {
             <Switch>
               <Route exact path='/job' component={Job}/>
               <Route exact path='/job/:id' component={JobDetail}/>
-              <Route component={NotFound}/>
+              <Route component={Job}/>
             </Switch>
           </Col>
         </Row>
