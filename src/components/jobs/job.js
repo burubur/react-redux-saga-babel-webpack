@@ -14,7 +14,11 @@ class Jobs extends Component {
 
   componentDidMount() {
     this.dispatch({
-      type: 'fetchJobsRequested'
+      type: 'fetchJobsRequested',
+      payload: {
+        offset: 0,
+        limit: 10
+      }
     })
   }
   
