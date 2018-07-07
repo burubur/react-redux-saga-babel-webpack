@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
-import { Pagination } from 'antd'
+import { Pagination, Row } from 'antd'
 
 class pagination extends Component {
   render() {
+    const onPaging = (page) => {}
+
     return (
-      <Pagination />
+      <Row type='flex' justify='center'>
+        <Pagination
+          size='small'
+          current={1}
+          total={50}
+          pageSize={5}
+          onChange={onPaging}
+        />
+      </Row>
     )
   }
 }
