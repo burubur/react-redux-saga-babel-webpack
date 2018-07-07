@@ -1,10 +1,29 @@
-# React, Redux, Saga, Babel, Webpack
+# Maukerja Project
 
-0.0.1
+## How to simply Run
 
-React architecture using redux as a state management library and redux-saga as a middleware.
+for a simplify reason, .env is provided, just copy and then enter a line of the following command:
 
-Webpack plugins that I implemented:
+```
+$ yarn && npm run dev
+```
+
+## Description
+
+This is just a little an incomplete project to solve aJobThing test.
+
+### Stacks
+
+- React
+- Redux
+- Redux Saga
+- Babel
+- Webpack
+- Yarn
+- NodeJs & NPM
+- Ant Design
+
+### Webpack plugins that I implemented:
 
 - dotenv to keep env variable
 - html generator to generate index.html
@@ -14,8 +33,8 @@ Webpack plugins that I implemented:
 - dist folder cleaner
 - assets copier
 - code-splitter
-- hot reload
-- hot module replacement (live UI changes once css file changed)
+- hot reload (live UI reload once .js file been changed)
+- hot module replacement (live UI's style changes once .less or .css file been changed)
 
 ## Prerequisites
 
@@ -24,10 +43,8 @@ Webpack plugins that I implemented:
 
 ## Installation
 
-```bash
-$ git clone https://github.com/burhanmubarok/react-redux-saga-babel-webpack
-$ cd react-redux-saga-babel-webpack
-$ npm i
+```
+$ yarn
 ```
 
 ## Test
@@ -36,10 +53,21 @@ $ npm i
 $ npm test
 ```
 
-## Run
+## Run Development Version
 
-```bash
+```
 $ npm run dev
 ```
+
+## Build for Production
+
+```
+$ npm run prod
+```
+
+and then host a **dist** folder as a static file in a certain folder/bucket.
+
+## Preferences
+this project is created from scratch based on my codebase which I hosted in this [Github](https://github.com/burhanmubarok/react-redux-saga-babel-webpack)
 
 ***
