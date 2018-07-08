@@ -9,6 +9,8 @@ const CopyPlugin = require('copy-webpack-plugin')
 const appPackage = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json')))
 const gitRev = require('git-rev-sync')
 const gitPath = path.join(__dirname, '.git')
+const lessToJs = require('less-vars-to-js')
+const theme = lessToJs(fs.readFileSync(path.resolve(__dirname, 'src/assets/styles/theme.less'), 'utf8'))
 const lastCommit = fs.existsSync(gitPath) ? gitRev.short(gitPath) : ''
 const isProduction = process.env.NODE_ENV === 'production'
 const uglify = isProduction ? new webpack.optimize.UglifyJsPlugin() : () => {}
@@ -48,7 +50,8 @@ module.exports = {
           {
             loader: "less-loader",
             options: {
-                javascriptEnabled: true
+              javascriptEnabled: true,
+              modifyVars: theme
             }
           }
         ]
