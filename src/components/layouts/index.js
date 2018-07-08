@@ -1,2 +1,2 @@
-import Base from './base';
-export { Base }
+import Common from './common'
+export { Common }

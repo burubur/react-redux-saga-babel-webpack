@@ -1,4 +1,4 @@
 import React from 'react'
-import { Base } from './layouts';
+import { Common } from './layouts';
 
-export const Index = () => <Base />
+export const Index = () => <Common />
