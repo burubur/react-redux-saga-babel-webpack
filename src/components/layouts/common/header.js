@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Layout } from 'antd'
+import { Layout, Row, Col } from 'antd'
+import './header.less'
 
 class Header extends Component {
     render() {
-        return <Layout.Header/>
+        return <Layout.Header />
     }
 }
 
