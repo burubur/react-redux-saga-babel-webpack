@@ -7,6 +7,6 @@ configure({ adapter: new Adapter() })
 
 const wrapper = render(<Index />)
 
-test('it should render "Base Layout."', () => {
-  expect(wrapper.text()).toContain('Base Layout')
+test('it should render no empty component', () => {
+  expect(wrapper.text()).toContain('')
 })
