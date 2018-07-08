@@ -1,12 +1,12 @@
 import React from 'react'
 import Adapter from 'enzyme-adapter-react-16'
-import { configure, shallow, mount, render } from 'enzyme'
+import { configure, render } from 'enzyme'
 import { Index } from './index'
 
 configure({ adapter: new Adapter() })
 
-const wrapper = shallow(<Index />)
+const wrapper = render(<Index />)
 
-test('it should render "Halo Dunia."', () => {
-  expect(wrapper.text()).toContain('Halo Dunia')
+test('it should render "Base Layout."', () => {
+  expect(wrapper.text()).toContain('Base Layout')
 })
