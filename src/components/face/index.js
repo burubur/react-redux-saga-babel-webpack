@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, Input, Button } from 'antd'
+import { Row, Col, Form, Input, Button, Icon } from 'antd'
 import './index.less'
 
 class index extends Component {
@@ -23,6 +23,21 @@ class index extends Component {
                 </Row>
                 <Row type='flex' justify='center'>
                     <Button type='primary'>Chat</Button>
+                </Row>
+                <Row type='flex' justify='center'>
+                <div className='rsch-face-service'>
+                    <Icon type='tag' /> Choose a service
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <Icon type='clock-circle' /> Schedule Pickup & Delivery
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <Icon type='pay-circle' /> Pay with Cash or GoPay
+                </div>
                 </Row>
             </div>
         );
