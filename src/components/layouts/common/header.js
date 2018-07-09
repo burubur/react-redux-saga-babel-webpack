@@ -13,6 +13,15 @@ class Header extends Component {
                         </div>
                     </Col>
                     <Col>
+                        <Button>Home</Button>
+                        &nbsp;
+                        &nbsp;
+                        <Button>Services</Button>
+                        &nbsp;
+                        &nbsp;
+                        <Button>Book</Button>
+                        &nbsp;
+                        &nbsp;
                         <Button type='default'>Account</Button>
                     </Col>
                 </Row>
