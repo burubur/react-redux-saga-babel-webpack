@@ -8,7 +8,9 @@ class Header extends Component {
             <Layout.Header>
                 <Row type='flex' justify='space-between'>
                     <Col>
-                        <div className='brand' />
+                        <div className='rsch-brand'>
+                            RSCH Laundry
+                        </div>
                     </Col>
                     <Col>
                         <Button type='default'>Account</Button>
