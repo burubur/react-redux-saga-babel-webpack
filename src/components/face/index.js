@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, Input, Button, Icon, Divider } from 'antd'
+import { Row, Col, Form, Input, Button, Icon, Divider, Steps } from 'antd'
 import './index.less'
 
 class index extends Component {
@@ -41,9 +41,20 @@ class index extends Component {
                 </Row>
                 <Row type='flex' justify='center'>
                     <Col span={12}>
-                        <Divider>
-                            Our Process
-                        </Divider>
+                        <Row>
+                            <Col>
+                                <Divider>
+                                    Our Process
+                                </Divider>
+                            </Col>
+                            <Col>
+                                <Steps>
+                                    <Steps.Step title="Choose" icon={<Icon type="tag" />} status='finish' />
+                                    <Steps.Step title="Schedule" icon={<Icon type="clock-circle" />} status='finish' />
+                                    <Steps.Step title="Pay" icon={<Icon type="pay-circle" />} status='finish' />
+                                </Steps>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </div>
