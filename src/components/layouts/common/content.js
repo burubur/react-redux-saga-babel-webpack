@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
-import { Layout, Breadcrumb } from 'antd'
+import { Layout } from 'antd'
+import Face from './../../face'
 import './content.less'
 
 class Content extends Component {
     render() {
-        return <Layout.Content />
+        return (
+            <Layout.Content>
+                <div className='rsch-content'>
+                    <Face />             
+                </div>
+            </Layout.Content>
+        )
     }
 }
 
