@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Index as RootComponent } from './components'
 import { Provider } from 'react-redux'
 import { store } from './stores'
+import './index.less'
 
 const RootApp = () => (
   <Provider store={store}>
