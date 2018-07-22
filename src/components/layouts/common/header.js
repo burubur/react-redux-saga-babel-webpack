@@ -4,12 +4,13 @@ import './header.less'
 
 class Header extends Component {
     render() {
+        const { APP_NAME } = process.env
         return (
             <Layout.Header>
                 <Row type='flex' justify='space-between'>
                     <Col>
                         <div className='rsch-brand'>
-                            RSCH Laundry
+                            {APP_NAME || 'Project Name'}
                         </div>
                     </Col>
                     <Col>
