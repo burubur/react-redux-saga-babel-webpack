@@ -86,7 +86,8 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         'VERSION': JSON.stringify(appPackage.version),
-        'COMMIT': JSON.stringify(lastCommit)
+        'COMMIT': JSON.stringify(lastCommit),
+        'APP_NAME': JSON.stringify(process.env.APP_NAME)
       }
     }),
     new DotenvWebpackPlugin(),
