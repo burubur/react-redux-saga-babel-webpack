@@ -16,6 +16,7 @@ Webpack plugins that I implemented:
 - code-splitter
 - hot reload
 - hot module replacement (live UI changes once css file changed)
+- resolve using alias for a shorter importing syntax
 
 ## Prerequisites
 
