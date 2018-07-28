@@ -117,5 +117,10 @@ module.exports = {
     historyApiFallback: true,
     hot: true
   },
+  resolve:{
+    alias: {
+      Layouts: path.resolve(__dirname, 'src/components/layouts')
+    }
+  },
   mode: process.env.NODE_ENV
 }
