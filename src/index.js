@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Index as RootComponent } from './components'
+import { Index as RootComponent } from 'Components'
 import { Provider } from 'react-redux'
 import { store } from './stores'
 import './index.less'
