@@ -10,5 +10,6 @@ module.exports = {
   },
   'collectCoverage': true,
   'collectCoverageFrom': ['**/*.{js,jsx}', '!**/node_modules/**', '!**/vendor/**', '!webpack.config.js', '!**/__mock__/**', '!**/coverage/**', '!jest.config.js', '!**/dist/**', '!**/src/services/**'],
-  'automock': false
+  'automock': false,
+  'resolver': 'jest-webpack-resolver'
 }
