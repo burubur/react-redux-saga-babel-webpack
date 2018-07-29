@@ -5,7 +5,6 @@ import './header.less'
 
 class Header extends Component {
     render() {
-        const { APP_NAME } = process.env
         const mobileLayout = {
             xs: { span: 24},
             sm: { span: 24},

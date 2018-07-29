@@ -4,11 +4,14 @@ import './footer.less'
 
 class Footer extends Component {
     render() {
-        const releasedYear = 2018
-        const copy = releasedYear != new Date().getFullYear() ? releasedYear + '-' + new Date().getFullYear() : releasedYear
+        const copyIssuer = process.env.APP_NAME || 'RSCH Laboratory'
+        const releasedYear = '2018'
+        const copyYear= releasedYear != new Date().getFullYear() ? releasedYear + '-' + new Date().getFullYear() : releasedYear
+        const copyRight = `${copyIssuer} ©${copyYear}`
+
         return (
             <Layout.Footer>
-                RSCH ©{copy} Burhan Mubarok
+                {copyRight}
             </Layout.Footer>
         )
     }
