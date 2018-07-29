@@ -4,6 +4,22 @@ import './index.less'
 
 class index extends Component {
     render() {
+        const responsiveLayout = {
+            xs: { span: 22},
+            sm: { span: 20},
+            md: { span: 18},
+            lg: { span: 12},
+            xl: { span: 10},
+            xxl: { span: 6}
+        }
+        const responsiveLabelLayout = {
+            xs: { offset: 12, span: 0},
+            sm: { offset: 0, span: 12},
+            md: { offset: 9, span: 6},
+            lg: { offset: 9, span: 6},
+            xl: { offset: 9, span: 6},
+            xxl: { offset: 9, span: 6}
+        }
         return (
             <div className='rsch-face'>
                 <div className='rsch-face-slogan'>
@@ -11,12 +27,12 @@ class index extends Component {
                 </div>
                 <div className='rsch-face-address-availability'>
                     <Row type='flex' justify='center'>
-                        <Col span={8}>
+                        <Col {...responsiveLayout}>
                             <Form>
-                                <Form.Item label='Alamat / Kode POS' labelCol={{span: 6, offset: 9}}>
+                                <Form.Item label='Alamat/Kode POS' labelCol={responsiveLabelLayout}>
                                     <Input.Search
                                         enterButton
-                                        placeholder='Masukan alamat atau kode POS disini...'
+                                        placeholder='Masukan alamat disini'
                                     />
                                 </Form.Item>
                             </Form>
