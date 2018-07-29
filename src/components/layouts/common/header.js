@@ -5,29 +5,54 @@ import './header.less'
 class Header extends Component {
     render() {
         const { APP_NAME } = process.env
+        const mobileLayout = {
+            xs: { span: 24},
+            sm: { span: 24},
+            md: { span: 0},
+            lg: { span: 0},
+            xl: { span: 0},
+            xxl: { span: 0}
+        }
+        const desktopLayout = {
+            xs: { span: 0},
+            sm: { span: 0},
+            md: { span: 12},
+            lg: { span: 12},
+            xl: { span: 12},
+            xxl: { span: 12}
+        }
         return (
             <Layout.Header>
                 <Row type='flex' justify='space-between' align='middle'>
-                    <Col>
+                    <Col {...mobileLayout}>
+                        <Row type='flex' justify='center'>
+                            <div className='rsch-brand'>
+                                {APP_NAME || 'Project Name'}
+                            </div>
+                        </Row>
+                    </Col>
+                    <Col {...desktopLayout}>
                         <div className='rsch-brand'>
                             {APP_NAME || 'Project Name'}
                         </div>
                     </Col>
-                    <Col >
-                        <Menu
-                            mode='horizontal'
-                            selectable={false}
-                        >
-                            <Menu.Item key="mail">
-                                Services
-                            </Menu.Item>
-                            <Menu.Item key="mail2">
-                                Book
-                            </Menu.Item>
-                            <Menu.Item key='account'>
-                                Account
-                            </Menu.Item>
-                        </Menu>
+                    <Col {...desktopLayout}>
+                        <Row type='flex' justify='end'>
+                            <Menu
+                                mode='horizontal'
+                                selectable={false}
+                            >
+                                <Menu.Item key="mail">
+                                    Services
+                                </Menu.Item>
+                                <Menu.Item key="mail2">
+                                    Book
+                                </Menu.Item>
+                                <Menu.Item key='account'>
+                                    Account
+                                </Menu.Item>
+                            </Menu>
+                        </Row>
                     </Col>
                 </Row>
             </Layout.Header>
