@@ -99,7 +99,7 @@ class index extends Component {
                                             cover={<img alt='ironing-image' src='assets/images/contents/ironing.jpg' className='rsch-cover-rounded' />}
                                         >
                                             <Card.Meta
-                                                title='Setrika'
+                                                title='Setrika aja'
                                                 className='rsch-price-desc'
                                                 description='Harga: IDR 3.000'
                                             />
@@ -139,8 +139,8 @@ class index extends Component {
                                         >
                                             <Card.Meta
                                                 className='rsch-price-desc'
-                                                title='Perbaikan Pakaian'
-                                                description='Harga: IDR 10.000'
+                                                title='Vermax'
+                                                description='Harga: IDR 20.000'
                                             />
                                         </Card>
                                     </Col>
