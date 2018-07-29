@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, Input, Button, Icon, Divider, Steps, Card, Avatar} from 'antd'
+import { Row, Col, Form, Input, Button, Icon, Divider, Steps, Card } from 'antd'
 import './index.less'
 
 class index extends Component {
@@ -11,15 +11,6 @@ class index extends Component {
             lg: { span: 18 },
             xl: { span: 12 },
             xxl: { span: 8 }
-        }
-
-        const responsiveLabelLayout = {
-            xs: { offset: 12, span: 0 },
-            sm: { offset: 0, span: 12 },
-            md: { offset: 9, span: 6 },
-            lg: { offset: 8, span: 6 },
-            xl: { offset: 6, span: 8 },
-            xxl: { offset: 6, span: 8 }
         }
 
         const responsivePriceLayout = {
