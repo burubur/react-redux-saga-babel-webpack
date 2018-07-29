@@ -83,7 +83,7 @@ class index extends Component {
                                         <Card
                                             className='rsch-card-padding-bottom'
                                             hoverable
-                                            cover={<img alt='washing-image' src='assets/images/contents/washing.jpg' />}
+                                            cover={<img alt='washing-image' src='assets/images/contents/washing.jpg' className='rsch-cover-rounded' />}
                                         >
                                             <Card.Meta
                                                 title='Cuci aja'
@@ -96,7 +96,7 @@ class index extends Component {
                                         <Card
                                             className='rsch-card-padding-bottom'
                                             hoverable
-                                            cover={<img alt='ironing-image' src='assets/images/contents/ironing.jpg' />}
+                                            cover={<img alt='ironing-image' src='assets/images/contents/ironing.jpg' className='rsch-cover-rounded' />}
                                         >
                                             <Card.Meta
                                                 title='Setrika'
@@ -109,7 +109,7 @@ class index extends Component {
                                         <Card
                                             className='rsch-card-padding-bottom'
                                             hoverable
-                                            cover={<img alt='washing-ironing-image' src='assets/images/contents/washing-ironing.jpg' />}
+                                            cover={<img alt='washing-ironing-image' src='assets/images/contents/washing-ironing.jpg' className='rsch-cover-rounded' />}
                                         >
                                             <Card.Meta
                                                 className='rsch-price-desc'
@@ -122,7 +122,7 @@ class index extends Component {
                                         <Card
                                             className='rsch-card-padding-bottom'
                                             hoverable
-                                            cover={<img alt='dry-cleaning-image' src='assets/images/contents/dry-cleaning.jpg' />}
+                                            cover={<img alt='dry-cleaning-image' src='assets/images/contents/dry-cleaning.jpg' className='rsch-cover-rounded' />}
                                         >
                                             <Card.Meta
                                                 className='rsch-price-desc'
@@ -135,7 +135,7 @@ class index extends Component {
                                         <Card
                                             className='rsch-card-padding-bottom'
                                             hoverable
-                                            cover={<img alt='dry-cleaning-image' src='assets/images/contents/vermax.jpg' />}
+                                            cover={<img alt='dry-cleaning-image' src='assets/images/contents/vermax.jpg' className='rsch-cover-rounded' />}
                                         >
                                             <Card.Meta
                                                 className='rsch-price-desc'
