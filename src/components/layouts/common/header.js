@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Layout, Row, Col, Menu } from 'antd'
+import Brand from './brand'
 import './header.less'
 
 class Header extends Component {
@@ -26,15 +27,11 @@ class Header extends Component {
                 <Row type='flex' justify='space-between' align='middle'>
                     <Col {...mobileLayout}>
                         <Row type='flex' justify='center'>
-                            <div className='rsch-brand'>
-                                {APP_NAME || 'Project Name'}
-                            </div>
+                            <Brand />
                         </Row>
                     </Col>
                     <Col {...desktopLayout}>
-                        <div className='rsch-brand'>
-                            {APP_NAME || 'Project Name'}
-                        </div>
+                        <Brand />
                     </Col>
                     <Col {...desktopLayout}>
                         <Row type='flex' justify='end'>
