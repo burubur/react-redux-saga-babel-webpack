@@ -38,14 +38,17 @@ class Header extends Component {
                                 mode='horizontal'
                                 selectable={false}
                             >
-                                <Menu.Item key="mail">
-                                    Services
+                                <Menu.Item key="process">
+                                    Proses
                                 </Menu.Item>
-                                <Menu.Item key="mail2">
-                                    Book
+                                <Menu.Item key="price">
+                                    Harga
+                                </Menu.Item>
+                                <Menu.Item key='order'>
+                                    Cara Order
                                 </Menu.Item>
                                 <Menu.Item key='account'>
-                                    Account
+                                    Akun
                                 </Menu.Item>
                             </Menu>
                         </Row>
