@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, Input, Button, Icon, Divider, Steps, Card } from 'antd'
+import { Row, Col, Form, Input, Button, Icon, Divider, Steps, Card, Avatar} from 'antd'
 import './index.less'
 
 class index extends Component {
     render() {
         const responsiveLayout = {
-            xs: { span: 22},
-            sm: { span: 20},
-            md: { span: 18},
-            lg: { span: 12},
-            xl: { span: 10},
-            xxl: { span: 6}
+            xs: { span: 22 },
+            sm: { span: 20 },
+            md: { span: 18 },
+            lg: { span: 18 },
+            xl: { span: 12 },
+            xxl: { span: 8 }
         }
+
         const responsiveLabelLayout = {
-            xs: { offset: 12, span: 0},
-            sm: { offset: 0, span: 12},
-            md: { offset: 9, span: 6},
-            lg: { offset: 9, span: 6},
-            xl: { offset: 9, span: 6},
-            xxl: { offset: 9, span: 6}
+            xs: { offset: 12, span: 0 },
+            sm: { offset: 0, span: 12 },
+            md: { offset: 9, span: 6 },
+            lg: { offset: 8, span: 6 },
+            xl: { offset: 6, span: 8 },
+            xxl: { offset: 6, span: 8 }
         }
+
+        const responsivePriceLayout = {
+            xs: { span: 24 },
+            sm: { span: 8 },
+            md: { span: 12 },
+            lg: { span: 8 },
+            xl: { span: 8 },
+            xxl: { span: 8 } ,
+        }
+
+        const processDesc = `Satu pelanggan satu mesin, keamanan setiap pakaian pelanggan sangat terjamin, jika ada pakaian hilang kami bersedia ganti rugi.`
+        const priceDesc = `Harga sangat fleksibel sesuai dengan jenis layanan yang dipilih.`
+        const orderDesc = `Pilih jenis layanan, Jadwalkan penjemputan, Bayar, Udah itu aja.`
+        const paymentDesc = `Tunai, GoPay, Ovo, Kartu kredit.`
+
         return (
             <div className='rsch-face'>
                 <div className='rsch-face-slogan'>
@@ -29,7 +45,8 @@ class index extends Component {
                     <Row type='flex' justify='center'>
                         <Col {...responsiveLayout}>
                             <Form>
-                                <Form.Item label='Alamat/Kode POS' labelCol={responsiveLabelLayout}>
+                                <div className='rsch-center rsch-dark'>Alamat/Kode POS</div>
+                                <Form.Item>
                                     <Input.Search
                                         enterButton
                                         placeholder='Masukan alamat disini'
@@ -45,42 +62,18 @@ class index extends Component {
                     </Row>
                 </div>
                 <Row type='flex' justify='center'>
-                <div className='rsch-face-service'>
-                    <Icon type='tag' /> Pilih jenis layanan
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <Icon type='clock-circle' /> Tentukan penjemputan & pengiriman
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <Icon type='pay-circle' /> Bayar dengan uang cash atau GoPay
-                </div>
-                </Row>
-                <Row type='flex' justify='center'>
-                    <Col span={12}>
+                    <Col {...responsiveLayout}>
                         <Row>
                             <Col>
                                 <div className='rsch-face-service-detail'>
                                     <Divider>
-                                        Proses
+                                        Proses Laundry
                                     </Divider>
                                     <Row>
-                                        <Col span={10} offset={7} className='rsch-face-service-description'>
-                                            Satu pelanggan satu mesin, kami menjamin keamanan setiap pakaian pelanggan.
+                                        <Col className='rsch-face-service-description'>
+                                            {processDesc}
                                         </Col>
                                     </Row>
-                                </div>
-                            </Col>
-                            <Col>
-                                <div className='rsch-face-step-detail'>
-                                    <Steps>
-                                        <Steps.Step title="Pilih" icon={<Icon type="tag" />} status='finish' />
-                                        <Steps.Step title="Jadwalkan" icon={<Icon type="clock-circle" />} status='finish' />
-                                        <Steps.Step title="Bayar" icon={<Icon type="pay-circle" />} status='finish' />
-                                    </Steps>
                                 </div>
                             </Col>
                             <Col>
@@ -89,27 +82,77 @@ class index extends Component {
                                     Harga
                                 </Divider>
                                     <Row>
-                                        <Col span={10} offset={7} className='rsch-face-service-description'>
-                                            Harga kami berikan dengan sangat fleksibel sesuai dengan jenis layanan yang dipilih.
+                                        <Col className='rsch-face-service-description'>
+                                            {priceDesc}
                                         </Col>
                                     </Row>
                                 </div>
-                                <Row type='flex' gutter={24} justify='center'>
-                                    <Card>
-                                        Cuci
-                                    </Card>
-                                    <Card>
-                                        Setrika
-                                    </Card>
-                                    <Card>
-                                        Cuci & Setrika
-                                    </Card>
-                                    <Card>
-                                        Cuci Kering / Dry Cleaning
-                                    </Card>
-                                    <Card>
-                                        Perbaikan Pakaian
-                                    </Card>
+                                <Row type='flex' gutter={16} justify='center'>
+                                    <Col {...responsivePriceLayout}>
+                                        <Card
+                                            className='rsch-card-padding-bottom'
+                                            hoverable
+                                            cover={<img alt='washing-image' src='assets/images/contents/washing.jpg' />}
+                                        >
+                                            <Card.Meta
+                                                title='Cuci aja'
+                                                className='rsch-price-desc'
+                                                description='Harga: IDR 3.000'
+                                            />
+                                        </Card>
+                                    </Col>
+                                    <Col {...responsivePriceLayout}>
+                                        <Card
+                                            className='rsch-card-padding-bottom'
+                                            hoverable
+                                            cover={<img alt='ironing-image' src='assets/images/contents/ironing.jpg' />}
+                                        >
+                                            <Card.Meta
+                                                title='Setrika'
+                                                className='rsch-price-desc'
+                                                description='Harga: IDR 3.000'
+                                            />
+                                        </Card>
+                                    </Col>
+                                    <Col {...responsivePriceLayout}>
+                                        <Card
+                                            className='rsch-card-padding-bottom'
+                                            hoverable
+                                            cover={<img alt='washing-ironing-image' src='assets/images/contents/washing-ironing.jpg' />}
+                                        >
+                                            <Card.Meta
+                                                className='rsch-price-desc'
+                                                title='Cuci & Setrika'
+                                                description='Harga: IDR 6.000'
+                                            />
+                                        </Card>
+                                    </Col>
+                                    <Col {...responsivePriceLayout}>
+                                        <Card
+                                            className='rsch-card-padding-bottom'
+                                            hoverable
+                                            cover={<img alt='dry-cleaning-image' src='assets/images/contents/dry-cleaning.jpg' />}
+                                        >
+                                            <Card.Meta
+                                                className='rsch-price-desc'
+                                                title='Dry Cleaning'
+                                                description='Harga: IDR 20.000'
+                                            />
+                                        </Card>
+                                    </Col>
+                                    <Col {...responsivePriceLayout}>
+                                        <Card
+                                            className='rsch-card-padding-bottom'
+                                            hoverable
+                                            cover={<img alt='dry-cleaning-image' src='assets/images/contents/vermax.jpg' />}
+                                        >
+                                            <Card.Meta
+                                                className='rsch-price-desc'
+                                                title='Perbaikan Pakaian'
+                                                description='Harga: IDR 10.000'
+                                            />
+                                        </Card>
+                                    </Col>
                                 </Row>
                             </Col>
                             <Col>
@@ -117,9 +160,18 @@ class index extends Component {
                                 <Divider>
                                     Cara Order
                                 </Divider>
-                                    <Row>
-                                        <Col span={10} offset={7} className='rsch-face-service-description'>
-                                            Cara order kami buatkan dengan semudah mungkin, dan demi kenyamanan dan kemudahan pelanggan anda dapat menyampaikan ide yang lebih baik yang sekiranya dapat diterapkan pada sistem kami.
+                                    <Row justify='center'>
+                                        <Col className='rsch-face-service-description'>
+                                            {orderDesc}
+                                        </Col>
+                                        <Col>
+                                            <div className='rsch-face-step-detail'>
+                                                <Steps>
+                                                    <Steps.Step title="Pilih" icon={<Icon type="tag" />} status='finish' />
+                                                    <Steps.Step title="Jadwalkan" icon={<Icon type="clock-circle" />} status='finish' />
+                                                    <Steps.Step title="Bayar" icon={<Icon type="pay-circle" />} status='finish' />
+                                                </Steps>
+                                            </div>
                                         </Col>
                                     </Row>
                                 </div>
@@ -130,8 +182,8 @@ class index extends Component {
                                     Pembayaran
                                 </Divider>
                                     <Row>
-                                        <Col span={10} offset={7} className='rsch-face-service-description'>
-                                            Cara order kami buatkan dengan semudah mungkin, dan demi kenyamanan dan kemudahan pelanggan anda dapat menyampaikan ide yang lebih baik yang sekiranya dapat diterapkan pada sistem kami.
+                                        <Col className='rsch-face-service-description'>
+                                            {paymentDesc}
                                         </Col>
                                     </Row>
                                 </div>
