@@ -68,13 +68,13 @@ class index extends Component {
                                 </div>
                             </Col>
                             <Col>
+                                <div className='rsch-face-step-detail'>
                                 <Divider>
                                     Harga
                                 </Divider>
-                                <div className='rsch-face-step-detail'>
                                     <Row>
                                         <Col span={10} offset={7} className='rsch-face-service-description'>
-                                            Harga kami berikan dengan sangat fleksibel, Silahkan pilih jenis layanan yang diinginkan.
+                                            Harga kami berikan dengan sangat fleksibel sesuai dengan jenis layanan yang dipilih.
                                         </Col>
                                     </Row>
                                 </div>
@@ -97,10 +97,22 @@ class index extends Component {
                                 </Row>
                             </Col>
                             <Col>
+                                <div className='rsch-face-step-detail'>
                                 <Divider>
                                     Cara Order
                                 </Divider>
+                                    <Row>
+                                        <Col span={10} offset={7} className='rsch-face-service-description'>
+                                            Cara order kami buatkan dengan semudah mungkin, dan demi kenyamanan dan kemudahan pelanggan anda dapat menyampaikan ide yang lebih baik yang sekiranya dapat diterapkan pada sistem kami.
+                                        </Col>
+                                    </Row>
+                                </div>
+                            </Col>
+                            <Col>
                                 <div className='rsch-face-step-detail'>
+                                <Divider>
+                                    Pembayaran
+                                </Divider>
                                     <Row>
                                         <Col span={10} offset={7} className='rsch-face-service-description'>
                                             Cara order kami buatkan dengan semudah mungkin, dan demi kenyamanan dan kemudahan pelanggan anda dapat menyampaikan ide yang lebih baik yang sekiranya dapat diterapkan pada sistem kami.
