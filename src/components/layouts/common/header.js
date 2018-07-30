@@ -39,16 +39,19 @@ class Header extends Component {
                                 selectable={false}
                             >
                                 <Menu.Item key="process">
-                                    Proses
+                                    <a href='#process'>Proses</a>
                                 </Menu.Item>
                                 <Menu.Item key="price">
-                                    Harga
+                                    <a href='#price'>Harga</a>
                                 </Menu.Item>
                                 <Menu.Item key='order'>
-                                    Cara Order
+                                    <a href='#order'>Cara Order</a>
+                                </Menu.Item>
+                                <Menu.Item key='payment'>
+                                    <a href='#payment'>Cara Bayar</a>
                                 </Menu.Item>
                                 <Menu.Item key='account'>
-                                    Akun
+                                    <a href='#account'>Akun</a>            
                                 </Menu.Item>
                             </Menu>
                         </Row>

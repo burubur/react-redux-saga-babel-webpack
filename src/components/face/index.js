@@ -56,7 +56,7 @@ class index extends Component {
                     <Col {...responsiveLayout}>
                         <Row>
                             <Col>
-                                <div className='rsch-face-service-detail'>
+                                <div className='rsch-face-service-detail' id='process'>
                                     <Divider>
                                         Proses Laundry
                                     </Divider>
@@ -68,7 +68,7 @@ class index extends Component {
                                 </div>
                             </Col>
                             <Col>
-                                <div className='rsch-face-step-detail'>
+                                <div className='rsch-face-step-detail' id='price'>
                                 <Divider>
                                     Harga
                                 </Divider>
@@ -147,10 +147,10 @@ class index extends Component {
                                 </Row>
                             </Col>
                             <Col>
-                                <div className='rsch-face-step-detail'>
-                                <Divider>
-                                    Cara Order
-                                </Divider>
+                                <div className='rsch-face-step-detail' id='order'>
+                                    <Divider>
+                                        Cara Order
+                                    </Divider>
                                     <Row justify='center'>
                                         <Col className='rsch-face-service-description'>
                                             {orderDesc}
@@ -168,7 +168,7 @@ class index extends Component {
                                 </div>
                             </Col>
                             <Col>
-                                <div className='rsch-face-step-detail'>
+                                <div className='rsch-face-step-detail' id='payment'>
                                 <Divider>
                                     Pembayaran
                                 </Divider>
