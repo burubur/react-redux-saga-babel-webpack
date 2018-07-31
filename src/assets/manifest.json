@@ -1,0 +1,9 @@
+{
+    "name": "RSCH",
+    "short_name": "RSCH",
+    "lang": "en-US",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#2196f3",
+    "icons": []
+  }
