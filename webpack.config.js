@@ -92,6 +92,7 @@ module.exports = {
     }),
     new DotenvWebpackPlugin(),
     new HtmlWebpackPlugin({
+      author: '@burhan.mubarok',
       title: 'RSCH',
       template: path.resolve(__dirname, 'src/index.ejs'),
       minify: {
