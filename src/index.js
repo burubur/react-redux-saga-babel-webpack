@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { Index as RootComponent } from 'Components'
 import { Provider } from 'react-redux'
 import { store } from './stores'
@@ -13,7 +13,7 @@ const RootApp = () => (
 const rootElement = document.querySelector('#root')
 const createRootElement = document.createElement('div')
 
-ReactDOM.render(
+render(
   <RootApp />,
   rootElement || createRootElement
 )
