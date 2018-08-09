@@ -68,7 +68,19 @@ module.exports = {
             }
           }
         ]
-      }
+      }, {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/fonts/',
+              publicPath: 'assets/fonts/'
+          }
+        }]
+    }
     ]
   },
   optimization: {
@@ -121,6 +133,7 @@ module.exports = {
   resolve:{
     alias: {
       Components: path.resolve(__dirname, 'src/components'),
+      Assets: path.resolve(__dirname, 'src/assets'),
       Layouts: path.resolve(__dirname, 'src/components/layouts')
     }
   },
