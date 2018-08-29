@@ -32,7 +32,7 @@ class index extends Component {
                 <div className='rsch-face-slogan'>
                     Washing & Dry Cleaning
                 </div>
-                <div className='rsch-face-address-availability'>
+                {/* <div className='rsch-face-address-availability'>
                     <Row type='flex' justify='center'>
                         <Col {...responsiveLayout}>
                             <Form>
@@ -46,12 +46,12 @@ class index extends Component {
                             </Form>
                         </Col>
                     </Row>
-                </div>
-                <div className='rsch-face-chat'>
+                </div> */}
+                {/* <div className='rsch-face-chat'>
                     <Row type='flex' justify='center'>
                         <Button type='primary'>Chat</Button>
                     </Row>
-                </div>
+                </div> */}
                 <Row type='flex' justify='center'>
                     <Col {...responsiveLayout}>
                         <Row>

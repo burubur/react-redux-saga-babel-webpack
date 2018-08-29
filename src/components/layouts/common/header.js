@@ -50,9 +50,9 @@ class Header extends Component {
                                 <Menu.Item key='payment'>
                                     <a href='#payment'>Cara Bayar</a>
                                 </Menu.Item>
-                                <Menu.Item key='account'>
-                                    <a href='#account'>Akun</a>            
-                                </Menu.Item>
+                                {/* <Menu.Item key='account'>
+                                    <a href='#account'>Akun</a>
+                                </Menu.Item> */}
                             </Menu>
                         </Row>
                     </Col>
