@@ -20,7 +20,7 @@ Webpack plugins that I implemented:
 
 ## Prerequisites
 
-- [NodeJs](https://nodejs.org) & [npm](https://www.npmjs.com/)
+- [NodeJs](https://nodejs.org)
 - [Yarn](https://yarnpkg.com)
 
 ## Installation
@@ -34,13 +34,13 @@ $ npm i
 ## Test
 
 ```
-$ npm test
+$ yarn test
 ```
 
 ## Run
 
 ```bash
-$ npm run dev
+$ yarn dev
 ```
 
-***
+---
