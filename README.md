@@ -28,6 +28,7 @@ Webpack plugins that I implemented:
 ```bash
 $ git clone https://github.com/burhanmubarok/react-redux-saga-babel-webpack
 $ cd react-redux-saga-babel-webpack
+$ cp .env.example .env
 $ yarn
 ```
 

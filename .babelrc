@@ -1,12 +1,16 @@
 {
     "presets": [
-        ["es2015"], "react", "stage-3"
+        "@babel/preset-env",
+        "@babel/preset-react"
     ],
     "plugins": [
-        "transform-decorators-legacy", ["import", {
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["import", {
+            "decoratorsBeforeExport": true,
             "libraryName": "antd",
             "style": true
-        }]
+        }],
+        ["@babel/plugin-proposal-class-properties", { "loose" : true }],
     ],
     "env": {
         "test": {
