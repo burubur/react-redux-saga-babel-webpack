@@ -25,7 +25,7 @@ class index extends Component {
         const processDesc = `Satu pelanggan satu mesin, keamanan setiap pakaian pelanggan sangat terjamin, jika ada pakaian hilang kami bersedia ganti rugi.`
         const priceDesc = `Harga sangat fleksibel sesuai dengan jenis layanan yang dipilih.`
         const orderDesc = `Pilih jenis layanan, Jadwalkan penjemputan, Bayar, Udah itu aja.`
-        const paymentDesc = `Tunai, GoPay, Ovo, Kartu kredit.`
+        const paymentDesc = `Tunai, GoPay, Ovo, Link Aja, Kartu kredit.`
 
         return (
             <div className='rsch-face'>
